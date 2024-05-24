@@ -15,7 +15,6 @@
 	<description>user autenticator</description>
 	<properties>
 		<java.version>17</java.version>
-		<maven.compiler.release>17</maven.compiler.release>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -58,12 +57,9 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version> <!-- ou superior -->
-				<configuration>
-					<release>17</release>
-				</configuration>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.7</version>
 			</plugin>
 		</plugins>
 	</build>
