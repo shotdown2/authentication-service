@@ -33,14 +33,14 @@ public class AutenticatorController {
                     .body(ApiResponseDTO.builder()
                             .code("200")
                             .message("OK")
-                            .description("Usuário autenticado com sucesso.")
+                            .description("Usu\u00E1rio autenticado com sucesso.")
                     .build());
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body(ApiResponseDTO.builder()
                             .code("401")
                             .message("Unauthorized")
-                            .description("Usuário ou senha inválidos.")
+                            .description("Usu\u00E1rio ou senha inv\u00E1lidos.")
                             .build());
         }
     }
@@ -51,7 +51,7 @@ public class AutenticatorController {
             return ResponseEntity.status(HttpStatus.CONFLICT).body(ApiResponseDTO.builder()
                     .code("409")
                     .message("conflict")
-                    .description("Usuário já cadastrado.")
+                    .description("Usu\u00E1rio j\u00E1 cadastrado.")
                     .build());
         }
         userCredentials.put(userDTO.getUser(), userDTO.getPassword());
@@ -59,7 +59,7 @@ public class AutenticatorController {
                 .body(ApiResponseDTO.builder()
                         .code("201")
                         .message("created")
-                        .description("Usuário criado com sucesso.")
+                        .description("Usu\u00E1rio criado com sucesso.")
                         .build());
     }
 }
